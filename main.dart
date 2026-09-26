@@ -1,143 +1,153 @@
 void main() {
-  print("Halo Brokk");
-  print('Yuhuuu');
-  String? yourUsername = "XLinux";
-  print(yourUsername);
-  int yourAge = 22;
-  print(yourAge);
+  print("=== SISTEM LAUNDRY ===");
+  print("Selamat datang di Laundry Bersih Kilat!");
 
-  //   Nilai ini tidak di rubah jika sudah di definisikan
+  // Nullable String
+  String? namaPelanggan = "Rina";
+  print("Nama pelanggan: $namaPelanggan");
 
-  /*
-   * nilai ini tidak di rubah
-   * jika sudah di definisikan sebagai int
-   * 
-   * 
-   * 
-   * */
-  //    jumlah = 22.8;
-  //    print (yourAge);
+  int jumlahPesanan = 2;
+  print("Jumlah pesanan: $jumlahPesanan");
 
-  yourUsername = null;
-  print(yourUsername);
+  // String dapat diubah menjadi null
+  namaPelanggan = null;
+  print("Nama pelanggan setelah diubah: $namaPelanggan");
 
-  String? alamat;
-  alamat = "";
+  // Null Safety
+  String? alamatPelanggan;
+  alamatPelanggan = null;
 
-  alamat = null;
+  String alamat = alamatPelanggan ?? "Alamat belum tersedia";
+  print("Alamat pelanggan: $alamat");
 
-  String alamatSaya = alamat ?? 'Bukan Dari Konoha';
-  print(alamatSaya);
-
-  //   Final
-  final String yourNim = '1124160069';
-  print(yourNim);
+  // Final
+  final String nomorNota = "LDR-2026-0098";
+  print("Nomor nota: $nomorNota");
 
   // Const
-  const String yourKampus = "Global Institute";
-  print(yourKampus);
+  const String namaLaundry = "Bersih Kilat Laundry";
+  print("Nama laundry: $namaLaundry");
 
-  //   Late Modifier
-  late String myUsername;
+  // Late Modifier
+  late String namaPetugas;
 
-  void setUsername() {
-    myUsername = "Fahry Achmad";
-    print(setUsername);
+  void isiNamaPetugas() {
+    namaPetugas = "Sinta";
+    print("Nama petugas: $namaPetugas");
   }
 
-  //   Type Data
-  //   String
-  String namaSaya = 'Fahry';
-  String namaProdi = 'Teknik Informatika';
-  print('Nama saya $namaSaya, Asal Prodi $namaProdi');
+  isiNamaPetugas();
 
-  //   Integer
-  int hargaApel = 15000;
-  int jumlahApel = 10;
-  int totalHarga = hargaApel * jumlahApel;
+  // String
+  String jenisLaundry = "Cuci Kering";
+  String namaPelangganBaru = "Bagas";
 
-  print('Total Harga: $totalHarga');
+  print("Jenis laundry: $jenisLaundry");
+  print("Nama pelanggan: $namaPelangganBaru");
+
+  // Integer
+  int hargaPerKilo = 7000;
+  int beratPakaian = 5;
+
+  int totalHarga = hargaPerKilo * beratPakaian;
+
+  print("Harga per kilogram: Rp$hargaPerKilo");
+  print("Berat pakaian: $beratPakaian kg");
+  print("Total harga: Rp$totalHarga");
 
   // Double
-  double nilaiMTK = 90.5;
-  double nilaiIPA = 85.7;
-  double nilaiAgama = 89.8;
+  double hargaCuciSepatu = 25000.5;
+  double hargaSetrika = 15000.5;
+  double hargaBedCover = 35000.5;
 
-  print(nilaiMTK + nilaiIPA + nilaiAgama);
+  double totalLayanan =
+      hargaCuciSepatu + hargaSetrika + hargaBedCover;
+
+  print("Total layanan tambahan: Rp$totalLayanan");
 
   // Num
-  num rating = 4;
-  print(rating);
+  num diskon = 10;
+  print("Diskon awal: $diskon%");
 
-  rating = 4.7;
-  print(rating);
+  diskon = 12.5;
+  print("Diskon setelah berubah: $diskon%");
 
   // Bool
-  bool umurCukup = true;
-  bool memilikiKTP = false;
+  bool pakaianSudahDicuci = true;
+  bool pembayaranSudahLunas = false;
 
-  bool bolehMasuk = umurCukup && memilikiKTP;
+  bool pesananSelesai =
+      pakaianSudahDicuci && pembayaranSudahLunas;
 
-  print(bolehMasuk);
+  print("Pesanan sudah selesai: $pesananSelesai");
 
   // List
-  List<String> buah = ['Mangga', 'Jeruk Bali', 'Mengkudu', 'Lontar'];
-  print(buah[1] + " " + "dan" + " " + buah[2]);
+  List<String> jenisLayanan = [
+    "Cuci Kering",
+    "Cuci Basah",
+    "Setrika",
+    "Cuci Sepatu"
+  ];
 
-  buah.add("Pisang Jawa");
+  print("Layanan kedua: ${jenisLayanan[1]}");
 
-  print("Ini adalah : " + " " + buah[4]);
+  jenisLayanan.add("Cuci Bed Cover");
+
+  print("Layanan tambahan: ${jenisLayanan[4]}");
+  print("Daftar layanan laundry: $jenisLayanan");
 
   // Set
-  Set<String> nimMahasigma = {'1124160069', '1124160001', '1124160069'};
-  print(nimMahasigma);
-  //   Jadi kalau set itu bedanya sama list data tidak bisa duplikat jika sudah ada 1 maka tidak bisa ditambahkan lagi.
+  Set<String> nomorPesanan = {
+    "LDR001",
+    "LDR002",
+    "LDR003",
+    "LDR001"
+  };
+
+  print("Nomor pesanan: $nomorPesanan");
+
+  // Set tidak menyimpan data yang sama lebih dari satu kali
 
   // Map
-  Map<String, dynamic> karyawanPTXYZ = {
-    'id': 1,
-    'nik': 'MGR26001',
-    'nama': 'Fahry Achmad',
-    'jabatan': 'Manager',
-    'bagian': 'IT',
+  Map<String, dynamic> dataLaundry = {
+    "nomorNota": "LDR004",
+    "namaPelanggan": "Bagas",
+    "jenisLayanan": "Cuci Kering",
+    "berat": 4,
+    "harga": 28000,
+    "sudahBayar": true,
   };
-  print("NIK:" + " " + karyawanPTXYZ['nik']);
-  print("Nama Karyawan:" + " " + karyawanPTXYZ['nama']);
-  print("Bagian:" + " " + karyawanPTXYZ['bagian']);
+
+  print("Nomor nota: ${dataLaundry['nomorNota']}");
+  print("Nama pelanggan: ${dataLaundry['namaPelanggan']}");
+  print("Jenis layanan: ${dataLaundry['jenisLayanan']}");
+  print("Berat pakaian: ${dataLaundry['berat']} kg");
+  print("Harga: Rp${dataLaundry['harga']}");
+  print("Status pembayaran: ${dataLaundry['sudahBayar']}");
 
   // Object
-  // Tipe 1
-  Object dataLaptop1 = 'Laptop Asus ROG Zephyrus';
-  dataLaptop1 = 30000000;
-  dataLaptop1 = true;
+  Object dataLaundryObject = "Pakaian Pelanggan";
 
-  print(dataLaptop1); //true
-  
-  // Tipe 2
-  List<Object> dataLaptop2 = [
-    'Laptop Lenovo LOQ',
-    20000000,
+  dataLaundryObject = 8;
+  dataLaundryObject = true;
+
+  print("Nilai Object terakhir: $dataLaundryObject");
+
+  // List Object
+  List<Object> dataPesanan = [
+    "LDR005",
+    6,
     true
   ];
 
-  print(dataLaptop2); //[Laptop Lenovo LOQ, 20000000, true] --> Karena berbentuk   list 
-  
-  //Dynamic
-  dynamic nilaiFahry = 80;
-  nilaiFahry = 90.5;
-  nilaiFahry = 'Sembilan puluh';
-  print(nilaiFahry); //Sembilan puluh --> karena dynamic mengambil nilai terakhir
-  
-//   dynamic nilaiBudi = 80;
-//   nilaiBudi = 90.5;
-//   print(nilaiBudi.toUpperCase());
-  
-  //Error karena angka / integer tidak bisa di uppercase
-  
-  /*Uncaught Error, error: Error: NoSuchMethodError: 'toUpperCase'
-  Dynamic call failed.
-  Tried to invoke `null` like a method.
-  Receiver: 90.5
-  Arguments: []*/
-  
+  print("Data pesanan: $dataPesanan");
+
+  // Dynamic
+  dynamic statusLaundry = "Sedang Dicuci";
+
+  statusLaundry = 3;
+  statusLaundry = "Sudah Selesai";
+
+  print("Status laundry terakhir: $statusLaundry");
 }
+
