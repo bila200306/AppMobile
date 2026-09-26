@@ -1,3 +1,7 @@
+NAMA : NABILA INNAS
+NIM : 1124160217
+
+
 void main() {
   print("=== SISTEM LAUNDRY ===");
   print("Selamat datang di Laundry Bersih Kilat!");
